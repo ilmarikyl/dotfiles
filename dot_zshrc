@@ -100,9 +100,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Custom functions
+gacp() {
+  git add -A
+  git commit -m "$1"
+  git push
+}
+
 # Actual aliases
 alias gs="git status"
 alias textedit='open -a TextEdit'
+alias gacp='gacp'
+
 #alias python='python3'
 
 export NVM_DIR=~/.nvm
